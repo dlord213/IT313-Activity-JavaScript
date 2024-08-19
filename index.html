@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writing DOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="app"></div>
+    <script>
+      const htmlContent = `<main
+        class="flex flex-col h-[100vh] max-w-xl mx-auto my-4 justify-center"
+      >
+        <h1 class="text-4xl font-[700] text-slate-800 my-4">Register</h1>
+        <form
+          class="flex flex-col gap-2 app-form"
+          name="app-form"
+          id="app-form"
+        >
+          <input
+            type="text"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            placeholder="First Name"
+            name="firstname"
+          />
+          <input
+            type="text"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            placeholder="Last Name"
+            name="lastname"
+          />
+          <hr class="my-4" />
+          <input
+            type="email"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            placeholder="Email"
+            name="email"
+          />
+          <input
+            type="password"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            placeholder="Password"
+            name="password"
+          />
+          <input
+            type="password"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            placeholder="Confirm Password"
+            name="confirm_password"
+          />
+          <input
+            name="register_btn"
+            type="button"
+            value="Register"
+            class="p-4 bg-slate-100 rounded-lg text-slate-400 hover:cursor-pointer hover:bg-slate-900 hover:text-slate-50"
+            onclick="getAllValues()"
+          />
+        </form>
+      </main>`;
+
+      let appDiv = document.querySelector(".app");
+
+      appDiv.innerHTML = htmlContent;
+
+      let formElem = document.querySelector("#app-form");
+      const getAllValues = () => {
+        [...formElem.elements].forEach((item) => {
+          console.log("Item:", item.name, "\nValue:", item.value);
+        });
+      };
+    </script>
+  </body>
+</html>
