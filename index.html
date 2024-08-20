@@ -20,32 +20,34 @@
         >
           <input
             type="text"
-            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300 transition-all delay-0 duration-300 hover:border-slate-600"
             placeholder="First Name"
             name="firstname"
           />
           <input
             type="text"
-            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300 transition-all delay-0 duration-300 hover:border-slate-600"
             placeholder="Last Name"
             name="lastname"
           />
           <hr class="my-4" />
           <input
             type="email"
-            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300 transition-all delay-0 duration-300 hover:border-slate-600"
             placeholder="Email"
             name="email"
           />
           <input
             type="password"
-            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            minlength="8"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300 transition-all delay-0 duration-300 hover:border-slate-600"
             placeholder="Password"
             name="password"
           />
           <input
             type="password"
-            class="p-4 bg-slate-100 rounded-lg border border-slate-300"
+            minlength="8"
+            class="p-4 bg-slate-100 rounded-lg border border-slate-300 transition-all delay-0 duration-300 hover:border-slate-600"
             placeholder="Confirm Password"
             name="confirm_password"
           />
@@ -53,7 +55,7 @@
             name="register_btn"
             type="submit"
             value="Register"
-            class="p-4 bg-slate-100 rounded-lg text-slate-400 hover:cursor-pointer hover:bg-slate-900 hover:text-slate-50"
+            class="p-4 bg-slate-100 rounded-lg text-slate-400 transition-all delay-0 duration-300 hover:cursor-pointer hover:bg-slate-900 hover:text-slate-50"
             onclick="getAllValues()"
           />
         </form>
